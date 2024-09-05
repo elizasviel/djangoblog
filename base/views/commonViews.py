@@ -562,4 +562,7 @@ def getMostPopular(request):
 
         i += 1
 
+     # Add a simple console log
+    print("getMostPopular function called. Number of popular blogs:", len(poList))
+
     return hre(json.dumps(poList))
