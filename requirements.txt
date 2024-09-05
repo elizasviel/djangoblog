@@ -11,3 +11,4 @@ django-ckeditor
 django-constance[database]
 django-analytical
 borb
+dj-database-url==0.5.0

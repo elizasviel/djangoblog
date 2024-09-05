@@ -97,15 +97,11 @@ WSGI_APPLICATION = 'anan.wsgi.application'
 #     }
 #}
 
+import dj_database_url
+import os
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db_anan',
-        'USER': 'postgres',
-        'PASSWORD': 'admin1209',
-        'HOST': 'db',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
 
 
